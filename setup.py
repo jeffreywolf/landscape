@@ -32,7 +32,7 @@ setup(
     long_description=readme,
     packages=["landscape","landscape.raster","landscape.patch",
         "landscape.topography"],
-    install_requires = ['numpy', 'gdal'],
+    install_requires = ['numpy', 'gdal', 'scipy'],
     test_suite = "test.test_landscape",
     data_files = [("test/data", [
         "test/data/test_image.tif", 
