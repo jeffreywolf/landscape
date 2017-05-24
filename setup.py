@@ -17,7 +17,7 @@
 from setuptools import setup
 import landscape
 
-with open("README.rst") as f:
+with open("README.md") as f:
     readme = f.read()
 
 setup(
