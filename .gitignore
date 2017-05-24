@@ -1,0 +1,11 @@
+# Byte compiled
+*__pycache__
+
+# Build
+dist
+*.egg-info
+
+# directory content
+test/data/temp/test_predict.tif
+# file metadata for rasters
+*aux.xml
