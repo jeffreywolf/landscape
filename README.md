@@ -4,20 +4,20 @@
 datasets and use machine learning models on top of a 
 dataset API.
 
-## Introduction
+### Introduction
 `landscape` provides simple interfaces to raster data and
 a dataset API for machine learning pipelines. Geospatial 
 functionality is provided by GDAL and the dataset API 
 uses numpy's ndarray.  `landscape` is compatible with 
 Python 3.5+.
 
-## Installation
+### Installation
 
 `landscape` is available on GitHub. This version of landscape requires Python 3.5 or later. `landscape` is dependent on `numpy`, `scipy`, and `gdal`.
 
 The simplest way to get a Python environment set up to use this library is through using Anaconda.
 1. Download Anaconda (https://www.continuum.io/downloads). `landscape` requires Python >=3.5.
-2. Create a conda environment for using `landscape`. GDAL from the conda-forge repository is recommended.  The `landscape` package is was designed for use as part of a machine learning pipeline. Here is an example of a typical `landscape` environment.
+2. Create a conda environment for using `landscape`. GDAL from the conda-forge repository is recommended.  The `landscape` package is designed for use as part of a machine learning pipeline. Here is an example of a typical `landscape` environment.
 ```
 conda create -c conda-forge -n landscape python=3.6.1 tensorflow gdal keras ipython jupyter hdf5 h5py scikit-learn
 ```
@@ -31,7 +31,7 @@ To exit the landscape environment use `source deactivate landscape` (or on Windo
 If you have `gdal`, `numpy`, and `scipy` in Python 3.5+ then a simple `python setup.py install` from the landscape package directory will install `landscape`.  However, the Anaconda install also avoids potential conflicts with system level GDAL installations that may be used by geospatial applications already on your computer. GDAL (`gdal`) can also be difficult to install through PyPI.  
 
 
-## Example
+### Example
 
 Use the `raster` subpackage to read a raster as an array, load metadata,
 and write out the image as a new file.
@@ -76,36 +76,43 @@ gt.laplacian(bandwidth, os.path.join(dirname, "laplacian.tif"))
 gt.aspect(bandwidth, os.path.join(dirname, "aspect.tif"))
 ```
 
+There is also a command line program called `topography` that is installed when you install `landscape`.  The `topography` program will calculate the same statistics on your DEM as done above from within a Python script.
+
+```bash
+$ topography -h # information about usage
+$ # topography <dem.tif> <bandwidth in pixels> <output directory>
+$ topography test/data/test_dem.tif 5 test/data/temp
+```
 ------------------------------------------------------------------------
 ## Package Organization
 
-LICENSE.txt
-setup.py
-landscape/
-	__init__.py
-	patch/
-		__init__.py
-		datasets.py
-		load_datasets.py
-		patches.py
-		scene.py
-		splits.py
-	raster/
-		__init__.py
-		raster.py
-	topography/
-		__init__.py
-		topography.py
-test
-    __init__.py
-    data/
-        test_image.tif
-        test_mask.tif
-        test_dem.tif
-        temp/
-    test_landscape.py
-    test_patch.py
-    test_raster.py	
+LICENSE.txt  
+setup.py  
+landscape/  
+	__init__.py  
+	patch/  
+		__init__.py  
+		datasets.py  
+		load_datasets.py  
+		patches.py  
+		scene.py  
+		splits.py  
+	raster/  
+		__init__.py  
+		raster.py  
+	topography/  
+		__init__.py  
+		topography.py  
+test  
+    __init__.py  
+    data/  
+        test_image.tif  
+        test_mask.tif  
+        test_dem.tif  
+        temp/  
+    test_landscape.py  
+    test_patch.py  
+    test_raster.py  	
 
 ---------------------------------------------------------------------------
 
