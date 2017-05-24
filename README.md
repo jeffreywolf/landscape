@@ -84,38 +84,7 @@ $ # topography <dem.tif> <bandwidth in pixels> <output directory>
 $ topography test/data/test_dem.tif 5 test/data/temp
 ```
 ------------------------------------------------------------------------
-## Package Organization
 
-LICENSE.txt  
-setup.py  
-landscape/  
-	__init__.py  
-	patch/  
-		__init__.py  
-		datasets.py  
-		load_datasets.py  
-		patches.py  
-		scene.py  
-		splits.py  
-	raster/  
-		__init__.py  
-		raster.py  
-	topography/  
-		__init__.py  
-		topography.py  
-test  
-    __init__.py  
-    data/  
-        test_image.tif  
-        test_mask.tif  
-        test_dem.tif  
-        temp/  
-    test_landscape.py  
-    test_patch.py  
-    test_raster.py  	
+### Contributing
 
----------------------------------------------------------------------------
-
-Contributing
-
-Pull requests are welcome. 
+Pull requests are welcome.
