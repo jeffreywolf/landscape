@@ -4,6 +4,7 @@
 # Build
 dist
 *.egg-info
+build/
 
 # directory content
 test/data/temp/test_predict.tif
