@@ -19,7 +19,7 @@ The simplest way to get a Python environment set up to use this library is throu
 1. Download Anaconda (https://www.continuum.io/downloads). `landscape` requires Python >=3.5.
 2. Create a conda environment for using `landscape`. GDAL from the conda-forge repository is recommended.  The `landscape` package is designed for use as part of a machine learning pipeline. Here is an example of a typical `landscape` environment.
 ```
-conda create -c conda-forge -n landscape python=3.6.1 tensorflow gdal keras ipython jupyter hdf5 h5py scikit-learn
+conda create -c conda-forge -n landscape python=3.6.1 scipy tensorflow gdal keras ipython jupyter hdf5 h5py scikit-learn
 ```
 3. Activate your environment `source activate landscape` (or `activate landscape` on Windows).
 4. Download and install `landscape` by downloading the GitHub repository (`git clone https://www.github.com/jeffreywolf/landscape`) and then from within the repository directory running `python setup.py install`.
