@@ -18,27 +18,27 @@ from setuptools import setup
 import landscape
 
 with open("README.md") as f:
-    readme = f.read()
+    README = f.read()
 
 setup(
     name="landscape",
-    version=landscape.__version__,    
+    version=landscape.__version__,
     description="Simplify geospatial modeling",
     license="Apache License 2.0",
     keywords="gis raster model",
     author="Jeffrey A. Wolf",
     author_email="iamjwolf@gmail.com",
     url="https://www.github.com/jeffreywolf/landscape",
-    long_description=readme,
-    packages=["landscape","landscape.raster","landscape.patch",
-        "landscape.topography"],
-    install_requires = ['numpy', 'gdal', 'scipy'],
-    test_suite = "test.test_landscape",
-    data_files = [("test/data", [
-        "test/data/test_image.tif", 
-        "test/data/test_mask.tif", 
+    long_description=README,
+    packages=["landscape", "landscape.raster", "landscape.patch",
+              "landscape.topography"],
+    install_requires=['numpy', 'gdal', 'scipy'],
+    test_suite="test.test_landscape",
+    data_files=[("test/data", [
+        "test/data/test_image.tif",
+        "test/data/test_mask.tif",
         "test/data/test_dem.tif"])],
-    include_package_data = True,
+    include_package_data=True,
     entry_points={"console_scripts":[
         "topography = landscape.topography.topography:main"
     ]},
